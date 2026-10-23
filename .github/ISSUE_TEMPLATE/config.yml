@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Soporte oficial de LineageOS
+    url: https://wiki.lineageos.org/devices/zippo/
+    about: Para dudas sobre LineageOS en este dispositivo. Este repositorio no da soporte.
+  - name: Foro del dispositivo (XDA)
+    url: https://xdaforums.com/
+    about: Busca "zippo" + LineageOS. Es donde está la comunidad del Z6 Pro.

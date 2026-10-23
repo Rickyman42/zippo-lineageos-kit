@@ -1,0 +1,11 @@
+# Lo que se descarga de las fuentes oficiales: no se sube al repositorio.
+descargas/
+# Las copias de seguridad: son tus datos. Nunca deben acabar en un repositorio.
+copias/
+*.zip
+*.img
+*.parcial
+manifest-sha256.json
+lista-movil*.txt
+*-log.txt
+ULTIMA-COPIA.txt

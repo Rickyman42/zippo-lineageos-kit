@@ -1,0 +1,75 @@
+name: Contar qué pasó en tu Z6 Pro
+description: Para mejorar la guía con lo que te encontraste tú. No es un canal de soporte.
+labels: [informe]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Antes de seguir, lee esto.**
+
+        Este repositorio no da soporte. Nadie está de guardia y nadie puede recuperar datos perdidos.
+        Lo que sí sirve: contar con detalle qué te pasó, para que la guía mejore para el siguiente.
+
+        Si has perdido datos, lo sentimos de verdad, pero aquí no hay forma de devolvértelos.
+        Lo único que a veces funciona es pedir a la otra persona de la conversación que te reenvíe lo
+        importante: su copia del chat sigue en su móvil.
+
+  - type: checkboxes
+    id: confirmaciones
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: He leído AVISO.md y entiendo que esto no tiene soporte ni garantía
+          required: true
+        - label: Entiendo que nadie puede recuperar datos ya perdidos
+          required: true
+        - label: Mi dispositivo es un Lenovo Z6 Pro (`adb shell getprop ro.product.device` dice `zippo`)
+          required: true
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: ¿De qué va esto?
+      options:
+        - Un paso de la guía no funciona como está escrito
+        - Me encontré una trampa que no está documentada
+        - Un script da error
+        - Me funcionó y quiero aportar un detalle
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Qué versión instalaste
+      description: Nombre completo del archivo, tal cual
+      placeholder: lineage-24.0-20261023-nightly-zippo-signed.zip + MindTheGapps-17.0.0-arm64
+    validations:
+      required: true
+
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware base del que venías
+      description: La ROM de fábrica que tenías antes, si la sabes
+      placeholder: ZUI 12.5.365 (Android 11)
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Qué hiciste y qué pasó
+      description: Paso de la guía, comando exacto, y qué respondió exactamente. Sin esto no se puede ayudar.
+      placeholder: |
+        1. Seguí docs/03-instalar.md, paso 4
+        2. Ejecuté: adb sideload lineage-24.0-...zip
+        3. El móvil dijo: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: salida
+    attributes:
+      label: Mensajes de error, tal cual
+      description: Pégalos sin reescribirlos. Quita tu número de teléfono, correos y nombres de archivo personales.
+      render: text
